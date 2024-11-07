@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: docker.io/postgres:latest
+    container_name: task_manager_con
+    environment:
+      POSTGRES_DB: taskmanager
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+    
+    ports:
+      - "5432:5432"
+    
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

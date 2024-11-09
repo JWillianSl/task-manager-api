@@ -17,6 +17,26 @@ services:
     
     volumes:
       - pgdata:/var/lib/postgresql/data
+    
+    network:
+      - dbnet
+    
+  dbadmin:
+    image: docker.io/dpage/pgadmin4
+    container_name: task_manager_adm
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    
+    ports:
+      - "5051:80"
+    
+    network:
+      - dbnet
 
 volumes:
   pgdata:
+
+network:
+  dbnet:
+    driver: bridge

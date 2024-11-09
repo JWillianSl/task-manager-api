@@ -8,12 +8,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "user_roles")
 public class UserRole {
 
     @Id
@@ -21,6 +23,7 @@ public class UserRole {
     @Column(name = "role_id")
     private Long id;
 
+    @Column(name = "role_name")
     private String name;
 
     @ManyToMany(mappedBy = "roles")

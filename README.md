@@ -9,3 +9,4 @@ The project uses [PostgreSQL](https://www.postgresql.org/) for data storage. We 
 To manager the database we use [PgAdmin4](https://www.pgadmin.org/), it is started when you use `podman-compose up`. To access PgAdmin4, use a browser and do:
 * Search for **http://localhost:5051/**;
 * Fill out the form using the email and password defined in `podman-compose.yaml`.
+

@@ -1,5 +1,7 @@
-keys/
 target/
+
+# Key extension
+*.pem
 
 # Compiled class file
 *.class

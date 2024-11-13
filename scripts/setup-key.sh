@@ -3,6 +3,8 @@
 PRIVATE_KEY="../src/main/resources/keys/private.pem"
 PUBLIC_KEY="../src/main/resources/keys/public.pem"
 
+mkdir -p "../src/main/resources/keys/"
+
 if [ -f "$PRIVATE_KEY" ] && [ -f "$PUBLIC_KEY" ]; then
     echo "There are Keys!"
 else
